@@ -110,4 +110,8 @@ public class Producto {
     public void setFechaCaducidad(LocalDate fechaCaducidad) {
         this.fechaCaducidad = fechaCaducidad;
     }
+
+    public String obtenerDetalles() {
+        return String.format("Id: %s \nProducto: %s\n", this.idProducto, this.nombreProducto);
+    }
 }

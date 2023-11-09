@@ -1,6 +1,7 @@
 package com.sanmigueltech.inventariorestaurante.Model;
 
-import java.security.PublicKey;
+import com.sanmigueltech.inventariorestaurante.Model.producto.Producto;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -48,8 +49,8 @@ public class Inventario {
 
         ListaProducto = new ArrayList<>();
         Producto objProducto = new Producto();
-        if (idProducto.equals(objProducto.getId())) {
-            ListaProducto.remove();
+        if (idProducto.equals(objProducto.getIdProducto())) {
+            ListaProducto.remove(producto);
         }
     }
 
@@ -60,12 +61,12 @@ public class Inventario {
         Scanner sc = new Scanner(System.in);
 
         for(int i =0 ; i< ListaProducto.size() ; i++){
-            if(idProducto.equals(objProducto.getId()){
+            if(idProducto.equals(objProducto.getIdProducto())){
                 switch (opc){
                     case 1:
                         String nombre;
                         nombre = sc.next();
-                        objProducto.setNombre(nombre);
+                        objProducto.setNombreProducto(nombre);
                     case 2:
                         int cantidadNeto;
                         cantidadNeto = sc.nextInt();
@@ -86,8 +87,8 @@ public class Inventario {
         Producto objProducto = new Producto();
 
         for(int i = 0; i< ListaProducto.size() ; i++){
-            if(id.equals(Producto.getId())){
-                System.out.println(Producto.obtenerDetalles());
+            if(id.equals(producto.getIdProducto())){
+                System.out.println(producto.obtenerDetalles());
             }
             break;
         }
@@ -100,8 +101,8 @@ public class Inventario {
         Producto objProducto = new Producto();
 
         for(int i = 0; i< ListaProducto.size() ; i++){
-            if(precio.equals(Producto.getPrecio())){
-                System.out.println(Producto.obtenerDetalles());
+            if(precio == producto.getPrecio()){
+                System.out.println(producto.obtenerDetalles());
             }
             break;
         }
@@ -114,8 +115,8 @@ public class Inventario {
         Producto objProducto = new Producto();
 
         for(int i = 0; i< ListaProducto.size() ; i++){
-            if(categoria.equals(Producto.getCategoria())){
-                System.out.println(Producto.obtenerDetalles());
+            if(categoria.equals(producto.getCategoria().getNombre())){
+                System.out.println(producto.obtenerDetalles());
             }
             break;
         }

@@ -72,6 +72,7 @@ public class ProductoDAO {
                                 resultSet.getDouble("precio"),
                                 null,
                                 null,
+                                resultSet.getBoolean("tieneFechaCaducidad"),
                                 resultSet.getDate("fechaCaducidad")));
                     }
                 }
@@ -95,5 +96,42 @@ public class ProductoDAO {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    public Producto obtenerProductoId(String id){
+        Producto producto = null;
+        try{
+           final PreparedStatement statement = conSQL.prepareStatement("SELECT id, " +
+                   "nombre, " +
+                   "descripcion, " +
+                   "cantidadNeto, " +
+                   "precio, " +
+                   "fabricante, " +
+                   "categoria, " +
+                   "tieneFechaCaducidad, " +
+                   "fechaCaducidad FROM Producto " +
+                   "WHERE id = ?");
+           try(statement){
+               statement.setString(1, id);
+               statement.execute();
+               final ResultSet rs = statement.getResultSet();
+               if (rs.next()) {
+                   producto = new ProductoSolido(
+                           rs.getString("id"),
+                           rs.getString("nombre"),
+                           rs.getString("descripcion"),
+                           rs.getInt("cantidadNeto"),
+                           rs.getDouble("precio"),
+                           null,
+                           null,
+                           rs.getBoolean("tieneFechaCaducidad"),
+                           rs.getDate("fechaCaducidad")
+                   );
+               }
+           }
+        }catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        return producto;
     }
 }

@@ -26,6 +26,7 @@ public class InsetarProducto {
                 115.45,
                 null,
                 Categoria.ALIMENTOS,
+                true,
                 Date.valueOf("2023-12-16"));
         producto.guardarProducto(producto1);
 

@@ -88,7 +88,7 @@ public class Inventario {
 
         for(int i = 0; i< ListaProducto.size() ; i++){
             if(id.equals(producto.getIdProducto())){
-                System.out.println(producto.obtenerDetalles());
+//                System.out.println(producto.obtenerDetalles());
             }
             break;
         }
@@ -102,7 +102,7 @@ public class Inventario {
 
         for(int i = 0; i< ListaProducto.size() ; i++){
             if(precio == producto.getPrecio()){
-                System.out.println(producto.obtenerDetalles());
+ //               System.out.println(producto.obtenerDetalles());
             }
             break;
         }
@@ -116,7 +116,7 @@ public class Inventario {
 
         for(int i = 0; i< ListaProducto.size() ; i++){
             if(categoria.equals(producto.getCategoria().getNombre())){
-                System.out.println(producto.obtenerDetalles());
+   //             System.out.println(producto.obtenerDetalles());
             }
             break;
         }

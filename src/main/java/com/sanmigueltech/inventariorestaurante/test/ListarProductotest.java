@@ -27,7 +27,7 @@ public class ListarProductotest {
         }
         } catch (SQLException e) {
             System.out.println(e);
-        }
+         }
 
 
     }

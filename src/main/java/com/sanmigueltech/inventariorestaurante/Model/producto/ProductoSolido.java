@@ -2,13 +2,15 @@ package com.sanmigueltech.inventariorestaurante.Model.producto;
 
 import com.sanmigueltech.inventariorestaurante.Model.Categoria;
 import com.sanmigueltech.inventariorestaurante.Model.Fabricante;
+import lombok.NonNull;
 
 import java.sql.Date;
 import java.time.LocalDate;
 
 public class ProductoSolido extends Producto {
 
-    public ProductoSolido(String id
+    public ProductoSolido( @NonNull
+            String id
             , String nombre
             , String desc
             , int cantNeto

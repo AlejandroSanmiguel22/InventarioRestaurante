@@ -19,14 +19,14 @@ public class InsetarProducto {
             System.out.println(e);
         }
 
-        ProductoSolido producto1 = new ProductoSolido("Prod03",
-                "Falda de Cerdo",
-                "bolsa empaquetada de falda de cerdo 1 kg para carnitas",
-                23,
-                126.5,
+        ProductoSolido producto1 = new ProductoSolido("Prod07",
+                "Longaniza de puerco verde",
+                "bolsa empaquetada de 0.5 kg de longaniza",
+                56,
+                115.45,
                 null,
                 Categoria.ALIMENTOS,
-                Date.valueOf("2024-02-16"));
+                Date.valueOf("2023-12-16"));
         producto.guardarProducto(producto1);
 
 

@@ -3,20 +3,22 @@ package com.sanmigueltech.inventariorestaurante.Model.producto;
 import com.sanmigueltech.inventariorestaurante.Model.Categoria;
 import com.sanmigueltech.inventariorestaurante.Model.Fabricante;
 
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class ProductoSolido extends Producto {
 
     public ProductoSolido(String id
             , String nombre
+            , String desc
             , int cantNeto
             , double precio
             , Fabricante fab
             , Categoria cat
-            , LocalDate fechaCaducidad){
+            , Date fechaCaducidad){
         this.idProducto = id;
         this.nombreProducto = nombre;
+        this.descripcion = desc;
         this.cantidadNeto = cantNeto;
         this.precio = precio;
         this.fabricante = fab;
